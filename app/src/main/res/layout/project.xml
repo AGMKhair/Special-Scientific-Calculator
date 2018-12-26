@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/keyboard_view"
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="16dp"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--Content of the ScrollView-->
+                <TextView
+                    android:id="@+id/before_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="15dp"
+
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/before_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+
+                    android:inputType="numberDecimal" />
+                <TextView
+                    android:id="@+id/percent_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15dp"
+
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/percentage_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+
+                    android:inputType="numberDecimal" />
+                <TextView
+                    android:id="@+id/after_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15dp"
+
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/percent_result"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+
+                    android:padding="16dp"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+        </ScrollView>
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_above="@+id/relativeAd"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:background="@android:color/transparent"
+
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/relativeAd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+</merge>
